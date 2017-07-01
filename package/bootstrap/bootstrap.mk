@@ -10,7 +10,7 @@ BOOTSTRAP_SOURCE = bootstrap-$(BOOTSTRAP_VERSION)-dist.zip
 BOOTSTRAP_LICENSE = MIT
 
 define BOOTSTRAP_EXTRACT_CMDS
-	$(UNZIP) $(DL_DIR)/$(BOOTSTRAP_SOURCE) -d $(@D)
+	$(UNZIP) $(BOOTSTRAP_DL_DIR)/$(BOOTSTRAP_SOURCE) -d $(@D)
 	mv $(@D)/bootstrap-$(BOOTSTRAP_VERSION)-dist/* $(@D)/
 	rmdir $(@D)/bootstrap-$(BOOTSTRAP_VERSION)-dist
 endef
